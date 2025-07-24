@@ -1,0 +1,22 @@
+#footer-divider {
+  position: relative;
+}
+
+#footer-divider::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 0px;
+  border-top: 1px solid #fff;
+  background: #fff;
+  z-index: 0;
+}
+
+footer {
+  margin-top: 0;
+  background: rgba(0, 59, 110, 0.98) ;
+  position: relative;
+  z-index: 3; 
+}

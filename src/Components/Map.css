@@ -1,0 +1,21 @@
+
+.heading-box{
+   display: inline-block;      /* makes border fit the text */
+  border: 2px solid white;    /* white boundary */
+  padding: 8px 16px;          /* space inside the box */
+  border-radius: 8px;         /* optional rounded corners */
+  background-color: transparent; /* keep background transparent */
+  color: white; 
+
+}
+
+
+.heading-box::before,
+.heading-box::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100px;         
+  height: 2px;          
+  background-color: white;
+}
