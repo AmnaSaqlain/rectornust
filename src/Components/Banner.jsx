@@ -6,9 +6,15 @@ return(
     <div className='container-fluid p-0'
     
     >
-    <div className='banner position-relative'>
+    <div className='banner '>
         
-        <img src='/images/banner-img.PNG' alt='Special banner' className='banner-image img-fluid w-100'/>
+        <img src='/images/banner-img.PNG' alt='Special banner' className='banner-image' style={{
+          
+          position: "fixed",
+          width: '100%',
+          height: '100vh',
+           
+        }}/>
         
             </div>
     </div>

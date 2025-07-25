@@ -1,6 +1,7 @@
-/* Base navbar link style (default blue) */
-.navbar-nav .nav-link {
-  color: rgba(0, 59, 110, 0.98);
+
+
+header .navbar-nav .nav-link {
+  color: rgba(0, 59, 110, 0.98) !important; 
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   font-size: 18px;
@@ -9,13 +10,13 @@
   display: block;
 }
 
-.navbar-brand {
-  color: rgba(0, 59, 110, 0.98);
+header .navbar-brand {
+  color: rgba(0, 59, 110, 0.98) !important;
   font-size: 20px;
   line-height: 1.2;
 }
 
-.navbar-brand img {
+header .navbar-brand img {
   height: 50px !important;
   font-size: 24px;
   font-weight: bold;
@@ -25,13 +26,13 @@ button:focus {
   box-shadow: none;
 }
 
-.navbar {
+header .navbar {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
   min-height: 60px;
 }
 
-/* Mobile nav slide (hamburger menu) */
+
 .mobile-nav-slide {
   position: absolute;
   top: 50px;
@@ -41,7 +42,7 @@ button:focus {
   color: white;
   transform: translateX(-100%);
   transition: transform 0.6s ease, opacity 0.6s ease;
-  z-index: 999;
+  z-index: 2000; 
   padding: 1rem;
   visibility: hidden;
   opacity: 0;
@@ -53,6 +54,11 @@ button:focus {
   opacity: 1;
 }
 
+.mobile-nav-slide .nav-link {
+  color: white !important;
+}
+
+
 .mobile-search-slide {
   max-height: 0;
   overflow: hidden;
@@ -60,6 +66,7 @@ button:focus {
   padding: 0 1rem;
   opacity: 0;
   transition: max-height 0.6s ease, opacity 0.6s ease, padding 0.3s ease;
+  z-index: 2000; 
 }
 
 .mobile-search-slide.open {
@@ -69,9 +76,6 @@ button:focus {
   padding-bottom: 0.75rem;
 }
 
-/* -----------------------
-   Non-home pages (always blue topbar, white navbar)
------------------------- */
 header.non-home .top-bar {
   background-color: rgba(0, 59, 110, 0.98);
   color: white;
@@ -87,14 +91,12 @@ header.non-home .navbar-brand {
 }
 
 header.non-home .mobile-nav-slide,
-header.non-home .mobile-nav-slide .nav-link {
+header.non-home .mobile-search-slide {
   background-color: rgba(0, 59, 110, 0.98) !important;
-  color: white;
+  color: white !important;
 }
 
-/* -----------------------
-   Home page (TOP state)
------------------------- */
+
 header.home-top .top-bar {
   background-color: white;
   color: rgba(0, 59, 110, 0.98);
@@ -104,7 +106,6 @@ header.home-top .bottom-navbar {
   background-color: transparent;
 }
 
-/* White text for nav when at top */
 header.home-top .navbar-nav .nav-link,
 header.home-top .navbar-brand {
   color: white !important;
@@ -115,9 +116,7 @@ header.home-top .mobile-search-slide {
   background-color: transparent;
 }
 
-/* -----------------------
-   Home page (SCROLLED state)
------------------------- */
+
 header.home-scrolled .top-bar {
   background-color: rgba(0, 59, 110, 0.98);
   color: white;
@@ -127,35 +126,17 @@ header.home-scrolled .bottom-navbar {
   background-color: white;
 }
 
-/* Blue text for nav when scrolled */
 header.home-scrolled .navbar-nav .nav-link,
 header.home-scrolled .navbar-brand {
   color: rgba(0, 59, 110, 0.98) !important;
 }
 
-/* Mobile slides stay blue when scrolled */
 header.home-scrolled .mobile-nav-slide,
 header.home-scrolled .mobile-search-slide {
   background-color: rgba(0, 59, 110, 0.98);
 }
 
-/* -----------------------
-   Mobile top bar colors
------------------------- */
-header.home-top .mobile-top-bar {
-  background-color: white;
-  color: rgba(0, 59, 110, 0.98);
-}
 
-header.home-scrolled .mobile-top-bar,
-header.non-home .mobile-top-bar {
-  background-color: rgba(0, 59, 110, 0.98);
-  color: white;
-}
-
-/* -----------------------
-   Force mobile always blue
------------------------- */
 @media (max-width: 991px) {
   .mobile-nav-slide,
   .mobile-search-slide {

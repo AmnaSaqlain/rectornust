@@ -8,17 +8,19 @@ import Banner from '../Components/Banner';
 
 
 function HomePage() {
-  const headerHeight = 50;
+ 
   return (
     <>
      
      <div 
       style={{
           position: "fixed",
-          top: `${headerHeight}px`,
+          top:0, 
           left: 0,
           width: "100%",
-          height: `calc(100vh - ${headerHeight}px)`,
+          height: "100vh",
+          backgroundRepeat: "no-repeat",
+          objectFit: "cover",
           zIndex: 1,
           
         }}>
